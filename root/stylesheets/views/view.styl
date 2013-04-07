@@ -1,0 +1,17 @@
+view()
+  .view
+    margin: 0 auto
+
+new-view(name, max-width=800px, background=transparent, color=#fff)
+  .view-{name}
+    background: background
+    max-width: max-width
+    color: color
+
+  @media tablet
+    .view-{name}
+      max-width: (max-width / 1.5)
+
+  @media phone
+    .view-{name}
+      max-width: (max-width / 3)

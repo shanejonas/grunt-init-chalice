@@ -1,0 +1,22 @@
+@import 'views/view'
+@import 'views/composite'
+@import 'views/navbar'
+@import 'views/composite'
+@import 'reset'
+@import 'misc'
+
+// device media queries
+tablet = "(min-width: 768px) and (max-width: 979px)"
+phone = "(max-width: 767px)"
+
+
+// base view mixins
+navbar-view()
+view()
+composite-view()
+max-width = 800px
+
+// new views
+new-composite-view('app', max-width)
+new-navbar-view('navbar', max-width)
+new-view('hello-world', max-width)
