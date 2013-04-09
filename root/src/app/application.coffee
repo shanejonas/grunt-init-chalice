@@ -39,7 +39,7 @@ class Application extends Router
 
   index: ->
     @swap new View
-      template: -> 'Hello/World'
+      template: -> 'Hello World'
       uniqueName: 'hello-world'
     @fetcher()
 
