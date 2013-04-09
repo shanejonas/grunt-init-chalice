@@ -1,6 +1,6 @@
 # grunt-init-chalice
 
-> Create a Node.js module with [grunt-init][], including Nodeunit unit tests.
+> Create a new [Chalice](http://github.com/shanejonas/chalice-docs) application with [grunt-init][].
 
 [grunt-init]: http://gruntjs.com/project-scaffolding
 
