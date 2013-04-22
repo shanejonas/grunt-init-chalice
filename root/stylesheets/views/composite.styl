@@ -1,19 +1,17 @@
-
 composite-view()
   .composite-view
+    padding: 44px 0 0 0
+    max-width: $max-width
     margin: 0 auto
-
-new-composite-view(name, max-width=800px, background=transparent, color=#fff)
-  .composite-view-{name}
-    padding: 48px 0 0 0
-    background: background
-    max-width: max-width
-    color: color
-
   @media tablet
-    .composite-view-{name}
-      max-width: (max-width / 1.5)
+    .composite-view
+      max-width: ($max-width / 1.5)
 
   @media phone
-    .composite-view-{name}
-      max-width: (max-width / 3)
+    .composite-view
+      max-width: ($max-width / 3)
+
+new-composite-view(name, background=transparent, color=#fff)
+  .composite-view-{name}
+    background: background
+    color: color

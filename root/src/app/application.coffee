@@ -13,11 +13,9 @@ class Application extends Router
 
   getAppView: ->
     new CompositeView
-      uniqueName: 'app'
 
   getNavigationView: ->
     new NavBarView
-      uniqueName: 'navbar'
       collection: @pages
 
   fetcher: ->
@@ -40,19 +38,16 @@ class Application extends Router
   index: ->
     @swap new View
       template: -> 'Hello World'
-      uniqueName: 'hello-world'
     @fetcher()
 
   bleep: ->
     @swap new View
       template: -> 'Bleep'
-      uniqueName: 'bleep'
     @fetcher()
 
   bloop: ->
     @swap new View
       template: -> 'Bloop'
-      uniqueName: 'bloop'
     @fetcher()
 
 makeApplication = ->

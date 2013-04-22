@@ -9,63 +9,71 @@ navbar-view()
     padding: 5px 20px 5px 34px
     overflow: hidden
     z-index: 9999
-
-    nav > a
-      width: auto
-      color: #fff
-      font-size: 12px
-      font-weight: 600
-      text-transform: uppercase
-      text-decoration: none
-      display: inline-block
-      position: relative
-      height: 88px
-      margin: 0 3px 0
-      transform: translate3d(0,0,0)
-      backface-visibility: hidden
-      perspective: 1000
-
-      span
-        display: block
-        padding: 10px
-        height: 100%
-        position: relative
-        transform: translate3d(0,0,0)
-        transition: transform 0.25s
-
-        &:after
-          content: attr(data-title)
-          bottom: 0
-          left: 0
-          position: absolute
-          width: 100%
-          height: 50%
-          display: block
-          color: #e7baff
-          padding: 10px
-
-      &:hover
-        span
-          transform: translate3d(0,-50%,0)
-
-      &.home
-        &:before
-          content: '⚡'
-          font-family: 'icon'
-          font-weight: 300
-          position: absolute
-          top: 6px
-          left: -18px
-          font-size: 18px
-
-new-navbar-view(name, max-width=800px, background=#422c4e, height=44px, font-size=12px)
-  .navbar-view-{name}
-    background: background
-    padding: 5px 20px 5px 34px
+    background: #422c4e
 
     nav
-      max-width: max-width
+      max-width: $max-width
       margin: 0 auto
+      > a
+        width: auto
+        color: #fff
+        font-size: 12px
+        font-weight: 600
+        text-transform: uppercase
+        text-decoration: none
+        display: inline-block
+        position: relative
+        height: 88px
+        margin: 0 3px 0
+        transform: translate3d(0,0,0)
+        backface-visibility: hidden
+        perspective: 1000
+
+        span
+          display: block
+          padding: 10px
+          height: 100%
+          position: relative
+          transform: translate3d(0,0,0)
+          transition: transform 0.25s
+
+          &:after
+            content: attr(data-title)
+            bottom: 0
+            left: 0
+            position: absolute
+            width: 100%
+            height: 50%
+            display: block
+            color: #e7baff
+            padding: 10px
+
+        &:hover
+          span
+            transform: translate3d(0,-50%,0)
+
+        &.home
+          &:before
+            content: '⚡'
+            font-family: 'icon'
+            font-weight: 300
+            position: absolute
+            top: 6px
+            left: -18px
+            font-size: 18px
+  @media tablet
+    .navbar-view
+      nav
+        max-width: ($max-width / 1.5)
+
+  @media phone
+    .navbar-view
+      nav
+        max-width: ($max-width / 3)
+
+new-navbar-view(name, background=#422c4e, height=44px, font-size=12px)
+  .navbar-view-{name}
+    background: background
 
     nav > a
       color: #fff
@@ -75,12 +83,3 @@ new-navbar-view(name, max-width=800px, background=#422c4e, height=44px, font-siz
       span:after
         color: #e7baff
 
-  @media tablet
-    .navbar-view-{name}
-      nav
-        max-width: (max-width / 1.5)
-
-  @media phone
-    .navbar-view-{name}
-      nav
-        max-width: (max-width / 3)
