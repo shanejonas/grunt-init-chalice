@@ -159,6 +159,31 @@ change.
 
 ![grunt-devtools](http://cloud.shanejon.as/image/3s0l2X3J0I1f/Screen%20Shot%202013-03-31%20at%2011.00.08%20PM.png)
 
+### Generators
+You can use the following grunt tasks to generate new views/models/routers:
+- `grunt generate:view --name=MyView`
+- `grunt generate:model --name=MyView`
+- `grunt generate:router --name=MyView`
+- `grunt delete:view --name=MyView`
+- `grunt delete:model --name=MyView`
+- `grunt delete:router --name=MyView`
+
+Sample output:
+```
+$ grunt generate:router --name=MyRouter
+Running "generate:router" (generate) task
+File written to: ./src/routers/myrouter.coffee
+File written to: ./test/routers/myrouter.coffee
+
+Done, without errors.
+$ grunt delete:router --name=MyRouter
+Running "delete:router" (delete) task
+File deleted: ./src/routers/myrouter.coffee
+File deleted: ./test/routers/myrouter.coffee
+
+Done, without errors.
+```
+
 You can get a list of all the tasks by running `grunt --help`.
 
 ---
