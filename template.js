@@ -52,7 +52,7 @@ exports.template = function(grunt, init, done) {
       "connect": "~2.7.3",
       "chalice-server": "0.0.5",
       "chalice-compositeview": "0.0.3",
-      "chalice-view": "0.0.3",
+      "chalice-view": "0.0.4",
       "chalice-client": "0.0.3"
     };
     props.devDependencies = {
