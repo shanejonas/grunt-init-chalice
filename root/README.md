@@ -147,8 +147,8 @@ and here is how the `view` and `new-view` `mixins` are defined:
 Grunt is becoming a popular build tool, and for good reason. If you
 haven't seen grunt before, check the [getting started guide](). Running
 `grunt` out of the box will give you a dev server on `localhost:3000`
-that will selectively rebuild and livereload in the browser when `coffee-script` or `stylus` files
-change.
+that will selectively rebuild and livereload in the browser when `.coffee` or
+`.styl` files change.
 
 - `grunt` - Alias for "default" task
 - `grunt default` - Alias for "clean", "stylus:dev", "browserify2:dev", "express:app", "livereload-start", "regarde" tasks.
@@ -162,11 +162,11 @@ change.
 ### Generators
 You can use the following grunt tasks to generate new views/models/routers:
 - `grunt generate:view --name=MyView`
-- `grunt generate:model --name=MyView`
-- `grunt generate:router --name=MyView`
+- `grunt generate:model --name=MyModel`
+- `grunt generate:router --name=MyRouter`
 - `grunt delete:view --name=MyView`
-- `grunt delete:model --name=MyView`
-- `grunt delete:router --name=MyView`
+- `grunt delete:model --name=MyModel`
+- `grunt delete:router --name=MyRouter`
 
 Sample output:
 ```
@@ -176,6 +176,7 @@ File written to: ./src/routers/myrouter.coffee
 File written to: ./test/routers/myrouter.coffee
 
 Done, without errors.
+
 $ grunt delete:router --name=MyRouter
 Running "delete:router" (delete) task
 File deleted: ./src/routers/myrouter.coffee
@@ -200,5 +201,5 @@ The libraries live on `npm` and [github](http://github.com/shanejonas).
 
 #### Examples Applications:
 - [Blog Example](https://github.com/shanejonas/chalice-blog)
-- [Documentation Site](https://github.com/shanejonas/chalice)
+- [Documentation Site](https://github.com/shanejonas/chalice-docs)
 
