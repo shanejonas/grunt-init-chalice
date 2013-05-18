@@ -1,85 +1,70 @@
 navbar-view()
+  // layout
   .navbar-view
+    row()
     backface-visibility: hidden
     top: 0
     left: 0
-    position: fixed
-    height: 44px
     width: 100%
-    padding: 5px 20px 5px 34px
+    position: fixed
+    min-height: 44px
     overflow: hidden
     z-index: 9999
-    background: #422c4e
+    @media phone
+      position: relative
 
     nav
-      max-width: $max-width
+      max-width: total-width
       margin: 0 auto
+      height: 100%
+
       > a
-        width: auto
-        color: #fff
-        font-size: 12px
-        font-weight: 600
-        text-transform: uppercase
+        min-height: 44px
+        height: 100%
+        column(2)
+        @media phone
+          column(12)
+
+  // styles
+  .navbar-view
+    background: #6a598d
+
+    nav
+      border = solid gray 1px
+      > a
         text-decoration: none
-        display: inline-block
-        position: relative
-        height: 88px
-        margin: 0 3px 0
-        transform: translate3d(0,0,0)
-        backface-visibility: hidden
-        perspective: 1000
+        padding-top: 12px
+        text-align: center
+        font-weight: 500
+        border-right: border
+        color: #fefeff
+        font-size: font-size
+        @media phone
+          border-right: none
+          border-bottom: solid gray 1px
 
-        span
-          display: block
-          padding: 10px
-          height: 100%
-          position: relative
-          transform: translate3d(0,0,0)
-          transition: transform 0.25s
+      > a:first-child
+        border-left: border
+        @media phone
+          border-top: none
 
-          &:after
-            content: attr(data-title)
-            bottom: 0
-            left: 0
-            position: absolute
-            width: 100%
-            height: 50%
-            display: block
-            color: #e7baff
-            padding: 10px
+      > a:hover
+        background: gray
 
-        &:hover
-          span
-            transform: translate3d(0,-50%,0)
-
-        &.home
-          &:before
-            content: '⚡'
-            font-family: 'icon'
-            font-weight: 300
-            position: absolute
-            top: 6px
-            left: -18px
-            font-size: 18px
-  @media tablet
-    .navbar-view
-      nav
-        max-width: ($max-width / 1.5)
-
-  @media phone
-    .navbar-view
-      nav
-        max-width: ($max-width / 3)
-
-new-navbar-view(name, background=#422c4e, height=44px, font-size=12px)
-  .navbar-view-{name}
-    background: background
-
-    nav > a
-      color: #fff
-      font-size: font-size
-      height: height * 2
-
-      span:after
-        color: #e7baff
-
+// new-navbar-view(name, height=44px, font-size=12px)
+//   .navbar-view-{name}
+//     background: #6a598d
+// 
+//     nav
+//       > a
+//         text-align: center
+//         font-weight: 600
+//         border-right: solid gray 1px
+//         color: #fefeff
+//         font-size: font-size
+// 
+//       > a:first-child
+//         border-left: solid gray 1px
+// 
+//       > a:hover
+//         background: gray

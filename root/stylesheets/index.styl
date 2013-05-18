@@ -1,17 +1,18 @@
 // variables
-$primary-colour = #16101d
+$primary-colour = #232323
 $max-width = 800px
 
 // device media queries
 tablet = "(min-width: 768px) and (max-width: 979px)"
 phone = "(max-width: 767px)"
 
+@import 'reset'
+@import 'misc'
+@import 'grid'
 @import 'views/view'
 @import 'views/composite'
 @import 'views/navbar'
 @import 'views/composite'
-@import 'reset'
-@import 'misc'
 
 // base view mixins
 navbar-view()
@@ -19,4 +20,21 @@ view()
 composite-view()
 
 body
+  overflow: hidden
+  row()
+  margin: 0 auto
   background: $primary-colour
+  font-size: 100%
+
+.app-view
+  padding-top: 44px
+  @media phone
+    padding-top: 0px
+
+.view
+  max-width: 100%
+  padding: 10px
+  padding-top: 44px
+
+nav
+  // max-width: $max-width
