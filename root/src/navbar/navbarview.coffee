@@ -1,4 +1,4 @@
-View = require 'chalice-view'
+View = require '../chalice/view.coffee'
 template = require './navbar.hbs'
 
 class NavbarView extends View
