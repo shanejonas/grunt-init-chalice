@@ -3,9 +3,9 @@ try Backbone.$ = require '$' catch e
 _ = require 'underscore'
 
 NavBarView = require '../navbar/navbarview.coffee'
-CompositeView = require 'chalice-compositeview'
-View = require 'chalice-view'
-Router = require 'chalice-client'
+CompositeView = require '../chalice/composite.coffee'
+View = require '../chalice/view.coffee'
+Router = require '../chalice/router.coffee'
 
 class Application extends Router
 
