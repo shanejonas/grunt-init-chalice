@@ -14,7 +14,7 @@ app.configure ->
     res.setHeader('Content-Type', 'charset=utf-8')
     next()
 
-require('./src/server.coffee')(app, require './index.html.hbs')
+require('./src/chalice/server.coffee')(app, require './index.html.hbs')
 require './src/app/application'
 
 app.listen 3000
