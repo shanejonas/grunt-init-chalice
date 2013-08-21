@@ -50,7 +50,7 @@ exports.template = function(grunt, init, done) {
       "underscore": "~1.4.4",
       "express": "~3.1.0",
       "connect": "~2.7.3",
-      "chalice": "0.0.0",
+      "handlebars": "1.0.10"
     };
     props.devDependencies = {
       "grunt": "~0.4.0",
