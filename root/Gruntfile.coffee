@@ -4,7 +4,7 @@ uglify = require 'uglify-js2'
 shim = require 'browserify-shim'
 path = require 'path'
 fs = require 'fs'
-handlebars = require 'handleify/node_modules/handlebars'
+handlebars = require 'handlebars'
 _ = require 'underscore'
 
 
