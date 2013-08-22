@@ -46,11 +46,12 @@ exports.template = function(grunt, init, done) {
   ], function(err, props) {
     props.keywords = [];
     props.dependencies = {
-      "backbone": "~0.9.10",
-      "underscore": "~1.4.4",
+      "backbone": "~1.0.0",
+      "underscore": "~1.5.1",
       "express": "~3.1.0",
       "connect": "~2.7.3",
-      "handlebars": "1.0.10"
+      "handlebars": "1.0.12",
+      "chalice": "0.0.0"
     };
     props.devDependencies = {
       "grunt": "~0.4.0",
