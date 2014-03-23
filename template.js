@@ -54,6 +54,7 @@ exports.template = function(grunt, init, done) {
       "chalice": "0.0.0"
     };
     props.devDependencies = {
+      "coffee-script": "~1.6.3",
       "grunt": "~0.4.0",
       "grunt-devtools": "~0.1.0-7",
       "grunt-browserify2": "~0.1.6",
