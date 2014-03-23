@@ -22,7 +22,7 @@ module.exports = (grunt) ->
       server = null
 
     server = grunt.util.spawn
-      cmd: 'coffee'
+      cmd: './node_modules/.bin/coffee'
       args: [targetConfig]
       fallback: ->
     # Prevent EADDRINUSE from breaking Grunt
